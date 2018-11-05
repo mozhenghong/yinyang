@@ -1,0 +1,50 @@
+body{
+    background:#EDEDED;
+  }
+  @keyframes yinyang{
+    0%{
+      transform:rotate(0deg);
+    }
+    100%{
+      transform:rotate(360deg);
+    }
+  }
+  .yinyang{
+    /* border:1px solid red; */
+    width:200px;
+    height:200px;
+    border-radius:50%;
+  background: linear-gradient(to bottom, #ffffff 0%,#ffffff 50%,#000000 51%,#000000 51%,#000000 100%); 
+    position:relative;
+    margin:20px auto;
+    animation-name:yinyang;
+    animation-duration:2s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+  }
+  .yinyang::before{
+    content:"";
+    display:block;
+     border:45px solid black; 
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:white;
+    position:absolute;
+    top:50%;
+    left:0px;
+    transform:translateY(-50%);
+  }
+  .yinyang::after{
+    content:"";
+    display:block;
+   border:45px solid white;
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:black;
+    position:absolute;
+    top:50%;
+    right:0px;
+    transform:translateY(-50%);
+  }
